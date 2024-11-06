@@ -20,7 +20,7 @@ class ConnectionsManager:
         print("\nConnections:", list(self.graph.edges))
 
     def displayGraph(self):
-        nx.draw(self.graph, with_labels=True)
+        nx.draw(self.graph, with_labels=True, node_color='lightblue', font_size=13, node_size=2000,font_weight='bold')
         plt.show()
 
 def main():
