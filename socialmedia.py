@@ -10,8 +10,12 @@ class ConnectionsManager:
         print(f'User {username} added.')
 
     def addConnection(self, user1, user2):
-        self.graph.add_edge(user1, user2)
-        print(f"\nConnection added between {user1} and {user2}.")
+            if user1 in self.graph.nodes and user2 in self.graph.nodes:
+                self.graph.add_edge(user1, user2)
+                print(f"\nConnection added between {user1} and {user2}.")
+            else:
+                print("\nThe users need to exist first before adding a connection!")
+                
 
     def viewUsers(self):
         print("All users:", list(self.graph.nodes))
