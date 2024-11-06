@@ -13,17 +13,23 @@ def main():
         if choice == "1":
             pass
         
-        if choice == "2":
+        elif choice == "2":
             pass
         
-        if choice == "3":
+        elif choice == "3":
             pass
         
-        if choice == "4":
+        elif choice == "4":
             pass
         
-        if choice == "5":
+        elif choice == "5":
             pass
         
-        if choice == "6":
-            pass
+        elif choice == '6':
+            print("\nCheers!\n")
+            break
+        else:
+            print("\nPlease select a valid option!\n")
+            
+if __name__ == "__main__":
+    main()
