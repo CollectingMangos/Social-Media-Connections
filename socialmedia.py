@@ -6,18 +6,18 @@ class ConnectionsManager:
         self.graph = nx.Graph()
 
     def addUser(self, username):
-        self.graph.addNode(username)
+        self.graph.add_node(username)
         print(f'User {username} added.')
 
     def addConnection(self, user1, user2):
-        self.graph.addEdge(user1, user2)
-        print(f'Connection added between {user1} and {user2}.')
+        self.graph.add_edge(user1, user2)
+        print(f"\nConnection added between {user1} and {user2}.")
 
     def viewUsers(self):
         print("All users:", list(self.graph.nodes))
 
     def viewConnections(self):
-        print("Connections:", list(self.graph.edges))
+        print("\nConnections:", list(self.graph.edges))
 
     def displayGraph(self):
         nx.draw(self.graph, with_labels=True)
@@ -34,7 +34,7 @@ def main():
         print("5. Display connections graph")
         print("6. Exit the programme")
         
-        choice = input("Select one of the optioins: ")
+        choice = input("\nSelect one of the options: ")
         print("\n")
         
         if choice == "1":
@@ -55,11 +55,11 @@ def main():
         elif choice == "5":
             manager.displayGraph()
         
-        elif choice == '6':
-            print("\nCheers!\n")
+        elif choice == "6":
+            print("Cheers!\n")
             break
         else:
-            print("\nPlease select a valid option!\n")
+            print("Please select a valid option!\n")
             
 if __name__ == "__main__":
     main()
