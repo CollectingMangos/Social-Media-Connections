@@ -16,7 +16,6 @@ class ConnectionsManager:
             else:
                 print("\nThe users need to exist first before adding a connection!")
                 
-
     def viewUsers(self):
         print("All users:", list(self.graph.nodes))
 
